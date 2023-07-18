@@ -24,7 +24,7 @@
       {
         "type": "shell",
         "inline": [
-          "cat ~/.ssh/packer-key.pub >> ~/.ssh/authorized_keys"
+          "cat /home/oscar/.ssh/packer-key.pub >> /home/oscar/.ssh/authorized_keys"
         ]
       },
       {
