@@ -8,8 +8,12 @@
         "type": "amazon-ebs",
         "access_key": "{{user `aws_access_key`}}",
         "secret_key": "{{user `aws_secret_key`}}",
-        "region": "us-east-2",
-        "source_ami": "ami-05803413c51f242b7",
+        "region": "us-east-1",
+        "source_ami": "ami-01ccfa43554ac374e",
+        "source_ami_filter": {
+            "owners": ["112405504411"],
+            "most_recent": true
+        }
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
         "ami_name": "packer-demo {{timestamp}}"
@@ -29,7 +33,7 @@
       },
       {
         "type": "shell",
-        "script": "scrips/instalar-docker.sh"
+        "script": "/home/oscar/demo-packer/scrips/instalar-docker.sh"
       }
     ]
   }
